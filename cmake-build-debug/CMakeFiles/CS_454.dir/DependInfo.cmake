@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/chris/Desktop/cs_454/project1/DFA.cpp" "/home/chris/Desktop/cs_454/project1/cmake-build-debug/CMakeFiles/CS_454.dir/DFA.cpp.o"
   "/home/chris/Desktop/cs_454/project1/State.cpp" "/home/chris/Desktop/cs_454/project1/cmake-build-debug/CMakeFiles/CS_454.dir/State.cpp.o"
+  "/home/chris/Desktop/cs_454/project1/StateTest.cpp" "/home/chris/Desktop/cs_454/project1/cmake-build-debug/CMakeFiles/CS_454.dir/StateTest.cpp.o"
   "/home/chris/Desktop/cs_454/project1/main.cpp" "/home/chris/Desktop/cs_454/project1/cmake-build-debug/CMakeFiles/CS_454.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

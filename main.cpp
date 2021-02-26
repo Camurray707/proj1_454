@@ -1,6 +1,7 @@
 #include <iostream>
 #include <gmpxx.h>
 #include "State.h"
+#include "StateTest.h"
 #include <math.h>
 
 using namespace std;
@@ -12,11 +13,12 @@ void createDFA();
 
 int main() {
 
-    State newState;
-    newState.createStates("abbab");
+    //badaabcbcdcabad: reject
+    //abbccdaabca: accept
 
-    newState.getStateName();
-    newState.getMyStates();
+
+    StateTest tet("abbccdaabca");
+
 
 
 
@@ -32,7 +34,10 @@ mpz_class minString() {
 }
 
 void createDFA() {
-    for (int i = 0; i < 300; i++) {
-        State newState;
-    }
+    State newState;
+
+        newState.createStates(1);
+
+        newState.getStateName();
+        newState.getMyStates();
 }

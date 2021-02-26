@@ -6,6 +6,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lgmp")
 
 include_directories(usr/include)
 
-add_executable(CS_454 main.cpp State.cpp State.h)
+add_executable(CS_454 main.cpp State.cpp State.h DFA.cpp DFA.h StateTest.cpp StateTest.h)
 
 target_link_libraries(CS_454 gmp gmpxx)

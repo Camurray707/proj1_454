@@ -12,17 +12,20 @@
 class State {
 
 public:
+    State();
+
+
     std::string getStateName();
     void setStateName(std::string s);
 
-    void createStates(std::string s);
+    void createStates(int n);
     void getMyStates();
 
 
 
 private:
     void determineState();
-    bool accept = false;
+    bool accept;
     std::string stateName;
     std::vector<std::tuple<char, State>> myStates;    //a vector of tuples made up of input->state
 

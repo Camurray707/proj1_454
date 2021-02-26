@@ -6,29 +6,41 @@
 
 using namespace std;
 
+State::State() {
+    accept = false;
+    stateName = "";
+}
+
 string State::getStateName() {return stateName;}
 
 void State::setStateName(string s) {
     this->stateName = s;
 };
 
-void State::createStates(string s) {
-    this->setStateName(s);
+void State::createStates(int n) {
 
-    for (int i = 0; i < 4; i++) {
-        char input;
+    State emptyState;
+    tuple<char,State> empty (' ', emptyState);
+    myStates.push_back(empty);
 
-        if (i == 0) {input = 'a';}
-        else if (i == 1) {input = 'b';}
-        else if (i == 2) {input = 'c';}
-        else {input = 'd';}
+    for (int j = 1; j <= n; j++) {
+        for (int i = 0; i < 4; i++) {
+            char input;
 
-        State newState;
-        newState.setStateName(s+input);
+            if (i == 0) { input = 'a'; }
+            else if (i == 1) { input = 'b'; }
+            else if (i == 2) { input = 'c'; }
+            else { input = 'd'; }
 
-        tuple<char, State> inputA(input, newState);
-        myStates.push_back(inputA);
+            State newState;
+            newState.setStateName(this->getStateName() + input);
 
+            tuple<char, State> inputA(input, newState);
+            newState.myStates.push_back(inputA);
+
+            newState.getStateName();
+            newState.getMyStates();
+        }
     }
 };
 
