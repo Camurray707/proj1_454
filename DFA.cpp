@@ -3,3 +3,9 @@
 //
 
 #include "DFA.h"
+
+using namespace std;
+
+DFA::DFA() {
+
+}

@@ -5,29 +5,37 @@
 #ifndef CS_454_STATE_H
 #define CS_454_STATE_H
 
+#include <iostream>
 #include <vector>
 #include <tuple>
-#include <iostream>
+#include <queue>
+#include <cmath>
 
 class State {
 
 public:
-    State();
+    State(std::string s);
 
-
-    std::string getStateName();
-    void setStateName(std::string s);
-
-    void createStates(int n);
-    void getMyStates();
+    void getStateName();
+    int encode();
 
 
 
 private:
-    void determineState();
     bool accept;
+
+    std::string decode();
+
     std::string stateName;
-    std::vector<std::tuple<char, State>> myStates;    //a vector of tuples made up of input->state
+    int stateNumber;
+
+    std::string stateOnA;
+    std::string stateOnB;
+    std::string stateOnC;
+    std::string stateOnD;
+
+    bool validity(std::deque<char> d);
+
 
 };
 

@@ -8,10 +8,7 @@ CMakeFiles/CS_454.dir/DFA.cpp.o: ../State.h
 CMakeFiles/CS_454.dir/State.cpp.o: ../State.cpp
 CMakeFiles/CS_454.dir/State.cpp.o: ../State.h
 
-CMakeFiles/CS_454.dir/StateTest.cpp.o: ../StateTest.cpp
-CMakeFiles/CS_454.dir/StateTest.cpp.o: ../StateTest.h
-
+CMakeFiles/CS_454.dir/main.cpp.o: ../DFA.h
 CMakeFiles/CS_454.dir/main.cpp.o: ../State.h
-CMakeFiles/CS_454.dir/main.cpp.o: ../StateTest.h
 CMakeFiles/CS_454.dir/main.cpp.o: ../main.cpp
 

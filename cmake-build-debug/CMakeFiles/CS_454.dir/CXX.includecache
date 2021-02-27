@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/chris/Desktop/cs_454/project1/State.h
+/home/chris/Desktop/cs_454/project1/DFA.h
+iostream
+-
 vector
 -
 tuple
 -
-iostream
+gmpxx.h
 -
+State.h
+/home/chris/Desktop/cs_454/project1/State.h
 
-/home/chris/Desktop/cs_454/project1/StateTest.cpp
-StateTest.h
-/home/chris/Desktop/cs_454/project1/StateTest.h
-
-/home/chris/Desktop/cs_454/project1/StateTest.h
+/home/chris/Desktop/cs_454/project1/State.h
 iostream
 -
 vector
@@ -27,16 +27,16 @@ tuple
 -
 queue
 -
+cmath
+-
 
 /home/chris/Desktop/cs_454/project1/main.cpp
 iostream
 -
-gmpxx.h
--
 State.h
 /home/chris/Desktop/cs_454/project1/State.h
-StateTest.h
-/home/chris/Desktop/cs_454/project1/StateTest.h
+DFA.h
+/home/chris/Desktop/cs_454/project1/DFA.h
 math.h
 -
 

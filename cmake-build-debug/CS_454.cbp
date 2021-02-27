@@ -96,12 +96,6 @@
 		<Unit filename="/home/chris/Desktop/cs_454/project1/State.h">
 			<Option target="CS_454"/>
 		</Unit>
-		<Unit filename="/home/chris/Desktop/cs_454/project1/StateTest.cpp">
-			<Option target="CS_454"/>
-		</Unit>
-		<Unit filename="/home/chris/Desktop/cs_454/project1/StateTest.h">
-			<Option target="CS_454"/>
-		</Unit>
 		<Unit filename="/home/chris/Desktop/cs_454/project1/main.cpp">
 			<Option target="CS_454"/>
 		</Unit>

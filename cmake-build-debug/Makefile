@@ -197,33 +197,6 @@ State.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/State.cpp.s
 .PHONY : State.cpp.s
 
-StateTest.o: StateTest.cpp.o
-
-.PHONY : StateTest.o
-
-# target to build an object file
-StateTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/StateTest.cpp.o
-.PHONY : StateTest.cpp.o
-
-StateTest.i: StateTest.cpp.i
-
-.PHONY : StateTest.i
-
-# target to preprocess a source file
-StateTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/StateTest.cpp.i
-.PHONY : StateTest.cpp.i
-
-StateTest.s: StateTest.cpp.s
-
-.PHONY : StateTest.s
-
-# target to generate assembly for a file
-StateTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/StateTest.cpp.s
-.PHONY : StateTest.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -266,9 +239,6 @@ help:
 	@echo "... State.o"
 	@echo "... State.i"
 	@echo "... State.s"
-	@echo "... StateTest.o"
-	@echo "... StateTest.i"
-	@echo "... StateTest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
