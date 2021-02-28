@@ -36,6 +36,7 @@ State::State(string s) {
             }
         }
     }
+    this->encode();
 }
 
 void State::getStateName() {
@@ -43,7 +44,11 @@ void State::getStateName() {
     //cout<<stateOnA<<endl<<stateOnB<<endl<<stateOnC<<endl<<stateOnD<<endl;
 }
 
-bool State::validity(deque<char> d) {
+void State::getStateNumber() {
+    cout<<stateNumber<<endl;
+}
+
+bool State::validity(deque<char> d) {                   //checks if the state is part of the language
     bool aPresent = false;
     bool bPresent = false;
     bool cPresent = false;
@@ -64,35 +69,36 @@ bool State::validity(deque<char> d) {
     return aPresent && bPresent && cPresent && dPresent;
 }
 
-int State::encode() {                   //turns the state string into state number
-    stateNumber = 0;
-    int stateSize = stateName.length() - 1;
-    int a = 1;
-    int b = 2;
-    int c = 3;
-    int d = 4;
+void State::encode() {                   //turns the state string into state number
+    if (accept == 1) {
+        stateNumber = 0;
+        int stateSize = stateName.length() - 1;
 
-    for (char c : stateName) {
-        switch (c) {
-            case 'a':
-                stateNumber = stateNumber + (1 * pow(4, stateSize));
-                stateSize--;
-                break;
-            case 'b':
-                stateNumber = stateNumber + (2 * pow(4, stateSize));
-                stateSize--;
-                break;
-            case 'c':
-                stateNumber = stateNumber + (3 * pow(4, stateSize));
-                stateSize--;
-                break;
-            case 'd':
-                stateNumber = stateNumber + (4 * pow(4, stateSize));
-                stateSize--;
-                break;
+        for (char c : stateName) {
+            switch (c) {
+                case 'a':
+                    stateNumber = stateNumber + (1 * pow(4, stateSize));
+                    stateSize--;
+                    break;
+                case 'b':
+                    stateNumber = stateNumber + (2 * pow(4, stateSize));
+                    stateSize--;
+                    break;
+                case 'c':
+                    stateNumber = stateNumber + (3 * pow(4, stateSize));
+                    stateSize--;
+                    break;
+                case 'd':
+                    stateNumber = stateNumber + (4 * pow(4, stateSize));
+                    stateSize--;
+                    break;
+            }
         }
+
+
+    }else {
+        stateNumber = -1;
     }
-    return stateNumber;
 }
 
 string State::decode() {                //turns the state number back into string

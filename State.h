@@ -17,7 +17,7 @@ public:
     State(std::string s);
 
     void getStateName();
-    int encode();
+    void getStateNumber();
 
 
 
@@ -25,6 +25,7 @@ private:
     bool accept;
 
     std::string decode();
+    void encode();
 
     std::string stateName;
     int stateNumber;

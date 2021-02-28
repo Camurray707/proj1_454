@@ -10,10 +10,13 @@ using namespace std;
 int main() {
 
     //badaabcbcdcabad: reject
-    //abbccdaabca: accept
+    //abbccdaabca: accept: 4461
+    //abbccdaabcaddbacdaabcdbabccd: accept: 2496
 
-    State test("babca");
-    cout<<test.encode();
+    State test("abbccdaabca");
+    //abbccdaabcaabbccdaabcababcad
+    test.getStateName();
+    test.getStateNumber();
 
 
 

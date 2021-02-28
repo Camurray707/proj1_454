@@ -9,3 +9,8 @@ using namespace std;
 DFA::DFA() {
 
 }
+
+mpz_class DFA::count(int n) {
+    vector<mpz_class> prev;
+    vector<mpz_class> next;
+}
