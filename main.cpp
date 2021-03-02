@@ -1,38 +1,27 @@
 #include <iostream>
-#include <gmpxx.h>
 #include "State.h"
+#include "DFA.h"
 #include <math.h>
 
 using namespace std;
 
 
-mpz_class count(int input);
-mpz_class minString();
-void createDFA();
 
 int main() {
 
-    State newState;
-    newState.createStates("abbab");
+    //badaabcbcdcabad: reject
+    //abbccdaabca: accept: 4461
+    //abbccdaabcaddbacdaabcdbabccd: accept: 2496
 
-    newState.getStateName();
-    newState.getMyStates();
+    DFA myDfa;
+    cout<<myDfa.count(6);
+
+
 
 
 
     return 0;
 }
 
-mpz_class count(int input) {
-    return input;
-}
 
-mpz_class minString() {
 
-}
-
-void createDFA() {
-    for (int i = 0; i < 300; i++) {
-        State newState;
-    }
-}
