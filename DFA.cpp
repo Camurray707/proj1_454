@@ -18,7 +18,8 @@ mpz_class DFA::count(int n) {
     queue<State> currQueue;                 //queue being counted
     currQueue.push(newState);
 
-    mpz_class count = 1;
+    mpz_class count = 0;
+    mpz_class prevCount = 0;
     int stringSize = 0;
 
 
@@ -33,25 +34,25 @@ mpz_class DFA::count(int n) {
                 switch (j) {
                     case 0: {
                         State tempStateA(currQueue.front().getNextStates(0));
-                        if (tempStateA.isValid()) count++;
+                        if (tempStateA.isValid() && stringSize == n -1) count++;
                         tempQueue.push(tempStateA);
                     }
                         break;
                     case 1: {
                         State tempStateB(currQueue.front().getNextStates(1));
-                        if (tempStateB.isValid()) count++;
+                        if (tempStateB.isValid() && stringSize == n -1) count++;
                         tempQueue.push(tempStateB);
                     }
                         break;
                     case 2: {
                         State tempStateC(currQueue.front().getNextStates(2));
-                        if (tempStateC.isValid()) count++;
+                        if (tempStateC.isValid() && stringSize == n -1) count++;
                         tempQueue.push(tempStateC);
                     }
                         break;
                     case 3: {
                         State tempStateD(currQueue.front().getNextStates(3));
-                        if (tempStateD.isValid()) count++;
+                        if (tempStateD.isValid() && stringSize == n - 1) count++;
                         tempQueue.push(tempStateD);
                         currQueue.pop();
                     }
