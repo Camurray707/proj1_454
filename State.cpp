@@ -48,6 +48,20 @@ void State::getStateNumber() {
     cout<<stateNumber<<endl;
 }
 
+bool State::isValid() {
+    return accept;
+}
+
+string State::getNextStates(int n) {
+    switch (n) {
+        case 0: return stateOnA;
+        case 1: return stateOnB;
+        case 2: return stateOnC;
+        case 3: return stateOnD;
+    }
+}
+
+
 bool State::validity(deque<char> d) {                   //checks if the state is part of the language
     bool aPresent = false;
     bool bPresent = false;

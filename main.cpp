@@ -13,10 +13,8 @@ int main() {
     //abbccdaabca: accept: 4461
     //abbccdaabcaddbacdaabcdbabccd: accept: 2496
 
-    State test("abbccdaabca");
-    //abbccdaabcaabbccdaabcababcad
-    test.getStateName();
-    test.getStateNumber();
+    DFA myDfa;
+    cout<<myDfa.count(6);
 
 
 
