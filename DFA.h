@@ -16,7 +16,7 @@ class DFA {
 public:
     DFA();
 
-    mpz_class count(int n);                                         //computes the number of strings w of length n over { a, b, c, d }.
+    int count(int n);                                         //computes the number of strings w of length n over { a, b, c, d }.
 
     mpz_class minString();                                          //takes as input a DFA M and outputs a string w of shortest length accepted by the DFA.
 

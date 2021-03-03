@@ -30,7 +30,11 @@ State::State(string s) {
                     for (char s:buffer) {
                         stateName.push_back(s);
                     }
-                }else {accept = false;}
+                }else {
+                    stateName = s;
+                    this->encode();
+                    accept = false;
+                }
             }else {
                 buffer.push_back(s[i]);
             }
