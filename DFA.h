@@ -8,15 +8,17 @@
 #include <iostream>
 #include <vector>
 #include <tuple>
-#include <gmpxx.h>
 #include "State.h"
 
 class DFA {
 
 public:
+
     DFA();
 
+    int finalCount(int n);
     int count(int n);                                         //computes the number of strings w of length n over { a, b, c, d }.
+    int countRetry(int n);
 
     mpz_class minString();                                          //takes as input a DFA M and outputs a string w of shortest length accepted by the DFA.
 
@@ -26,8 +28,9 @@ public:
 
 private:
 
-    mpz_class currCount;
-    std::vector<State> myStates;
+    bool validity(std::string s);
+
+    std::deque<State> myStates;
 
 
 };

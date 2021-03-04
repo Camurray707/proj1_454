@@ -10,6 +10,7 @@
 #include <tuple>
 #include <queue>
 #include <cmath>
+#include <gmpxx.h>
 
 class State {
 
@@ -17,19 +18,21 @@ public:
     State();
     State(std::string s);
 
-    void getStateName();        //print state name
-    void getStateNumber();      //print state id
+    std::string getStateName();        //print state name
+    int getStateNumber();      //print state id
     bool isValid();             //return true if valid string
+    int getLevel();
+
     std::string getNextStates(int n);
+    std::string decode(int n);  //function to decode integer n into string
 
 
 private:
-    bool accept;                //accept or reject state
     std::string stateName;      //string w
+    bool accept;                //accept or reject state
     int stateNumber;            //integer value of state after encoded
+    int stateLevel;
 
-
-    std::string decode();       //fixme:: function to decode integer value into state string
     void encode();              //function to encode state string into integer value
 
     std::string stateOnA;
@@ -38,8 +41,6 @@ private:
     std::string stateOnD;
 
     bool validity(std::deque<char> d);      //function to test if string w is part of language L
-
-
 };
 
 

@@ -5,7 +5,12 @@
 #include "State.h"
 
 using namespace std;
-
+State::State() {
+    stateName = "REJECT STATE";
+    stateNumber = -1;
+    stateLevel = -1;
+    accept = false;
+}
 State::State(string s) {
     stateOnA = s + 'a';
     stateOnB = s + 'b';
@@ -15,6 +20,8 @@ State::State(string s) {
     if (s.length() <= 5) {
         accept = true;          //if the string is less than 5 it is accepted
         stateName = s;
+        if (s == "") stateLevel = -1;
+        else {stateLevel = s.length();}
 
     }else if (s.length() > 5) {
         deque<char> buffer;
@@ -27,11 +34,13 @@ State::State(string s) {
                     buffer.push_back(s[i]);
                 }else if (validity(buffer)) {                           //if the string is valid and we are at the last char
                     accept = true;
+                    stateLevel = s.length();
                     for (char s:buffer) {
                         stateName.push_back(s);
                     }
                 }else {
                     stateName = s;
+                    stateLevel = s.length();
                     this->encode();
                     accept = false;
                 }
@@ -43,12 +52,11 @@ State::State(string s) {
     this->encode();
 }
 
-void State::getStateName() {
-    cout<<stateName<<endl;
-    //cout<<stateOnA<<endl<<stateOnB<<endl<<stateOnC<<endl<<stateOnD<<endl;
+string State::getStateName() {
+    return stateName;
 }
 
-void State::getStateNumber() {
+int State::getStateNumber() {
     cout<<stateNumber<<endl;
 }
 
@@ -88,7 +96,6 @@ bool State::validity(deque<char> d) {                   //checks if the state is
 }
 
 void State::encode() {                   //turns the state string into state number
-    if (accept == 1) {
         stateNumber = 0;
         int stateSize = stateName.length() - 1;
 
@@ -114,11 +121,50 @@ void State::encode() {                   //turns the state string into state num
         }
 
 
-    }else {
-        stateNumber = -1;
-    }
+    //else {
+//        stateNumber = -1;
+//    }
 }
 
-string State::decode() {                //turns the state number back into string
+string State::decode(int n) {                //turns the state number back into string
 
+    int temp = n;
+
+    string stringName;
+    deque<char> string;
+
+    while (temp != 0) {
+        switch(temp % 4) {
+            case 1:
+                string.push_front('a');
+                temp = temp/4;
+
+                break;
+            case 2:
+                string.push_front('b');
+                temp = temp/4;
+
+                break;
+            case 3:
+                string.push_front('c');
+                temp = temp/4;
+
+                break;
+            case 0:
+                string.push_front('d');
+                temp = (temp/4) - 1;
+
+                break;
+        }
+    }
+
+    for (char c : string) {
+        stringName.push_back(c);
+    }
+
+return stringName;
+}
+
+int State::getLevel() {
+    return stateLevel;
 }

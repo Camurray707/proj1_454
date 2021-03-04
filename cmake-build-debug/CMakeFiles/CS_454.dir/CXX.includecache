@@ -6,14 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/chris/Desktop/cs_454/project1/DFA.cpp
+DFA.h
+/home/chris/Desktop/cs_454/project1/DFA.h
+
 /home/chris/Desktop/cs_454/project1/DFA.h
 iostream
 -
 vector
 -
 tuple
--
-gmpxx.h
 -
 State.h
 /home/chris/Desktop/cs_454/project1/State.h
@@ -29,16 +31,6 @@ queue
 -
 cmath
 -
-
-/home/chris/Desktop/cs_454/project1/main.cpp
-iostream
--
-State.h
-/home/chris/Desktop/cs_454/project1/State.h
-DFA.h
-/home/chris/Desktop/cs_454/project1/DFA.h
-math.h
--
-chrono
+gmpxx.h
 -
 
