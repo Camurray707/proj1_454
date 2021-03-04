@@ -6,7 +6,8 @@
 #define CS_454_DFALIST_H
 
 #include <iostream>
-#include "State.h"
+#include <cmath>
+#include <deque>
 
 
 
@@ -14,21 +15,18 @@ class DFAList {
 
 public:
     DFAList();
-    DFAList(int n);
 
     int count(int n);
-    int count2(int n);
 
 private:
 
-    State* myDFA;
-    State* level5;
 
-    bool validity(std::string s);
+    bool validity(std::deque<char> d);
+    bool isValid(std::string s);
 
     std::string decode(int n);
-
     int encode(std::string s);
+
 };
 
 

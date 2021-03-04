@@ -16,11 +16,17 @@ tuple
 State.h
 /home/chris/Desktop/cs_454/project1/State.h
 
+/home/chris/Desktop/cs_454/project1/DFAList.cpp
+DFAList.h
+/home/chris/Desktop/cs_454/project1/DFAList.h
+
 /home/chris/Desktop/cs_454/project1/DFAList.h
 iostream
 -
-State.h
-/home/chris/Desktop/cs_454/project1/State.h
+cmath
+-
+deque
+-
 
 /home/chris/Desktop/cs_454/project1/State.h
 iostream
