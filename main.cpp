@@ -1,6 +1,7 @@
 #include <iostream>
 #include "State.h"
 #include "DFA.h"
+#include "DFAList.h"
 #include <math.h>
 #include <chrono>
 
@@ -19,17 +20,10 @@ int main() {
     //9: 31,584
     //10: 81,552
     //11: 211,224
+    //12:553656
 
-    State tempState("ddddd");
-    //cout<<tempState.decode(1364)<<endl;
-
-
-
-    DFA myDfa;
-    cout<<myDfa.finalCount(7);
-    //cout<<myDfa.count(8);
-
-
+    DFAList newDFA;
+    cout<<newDFA.count(12);
 
 
     return 0;

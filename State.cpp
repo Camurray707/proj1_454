@@ -25,14 +25,15 @@ State::State(string s) {
 
     }else if (s.length() > 5) {
         deque<char> buffer;
-
+        
         for (int i = 0; i <= s.length(); i++) {
+            bool val = validity(buffer);
 
             if (i >= 6) {
-                if (validity(buffer) && i <= s.length()-1) {            //if the string is valid and has more chars to add
+                if (val && i <= s.length()-1) {            //if the string is valid and has more chars to add
                     buffer.pop_front();
                     buffer.push_back(s[i]);
-                }else if (validity(buffer)) {                           //if the string is valid and we are at the last char
+                }else if (val) {                           //if the string is valid and we are at the last char
                     accept = true;
                     stateLevel = s.length();
                     for (char s:buffer) {
@@ -41,7 +42,6 @@ State::State(string s) {
                 }else {
                     stateName = s;
                     stateLevel = s.length();
-                    this->encode();
                     accept = false;
                 }
             }else {
@@ -167,4 +167,36 @@ return stringName;
 
 int State::getLevel() {
     return stateLevel;
+}
+
+State *State::getNextOnA() const {
+    return nextOnA;
+}
+
+void State::setNextOnA(State *nextOnA) {
+    State::nextOnA = nextOnA;
+}
+
+State *State::getNextOnB() const {
+    return nextOnB;
+}
+
+void State::setNextOnB(State *nextOnB) {
+    State::nextOnB = nextOnB;
+}
+
+State *State::getNextOnC() const {
+    return nextOnC;
+}
+
+void State::setNextOnC(State *nextOnC) {
+    State::nextOnC = nextOnC;
+}
+
+State *State::getNextOnD() const {
+    return nextOnD;
+}
+
+void State::setNextOnD(State *nextOnD) {
+    State::nextOnD = nextOnD;
 }

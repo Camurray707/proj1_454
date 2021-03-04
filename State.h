@@ -40,6 +40,29 @@ private:
     std::string stateOnC;
     std::string stateOnD;
 
+public:
+    State *getNextOnA() const;
+
+    void setNextOnA(State *nextOnA);
+
+    State *getNextOnB() const;
+
+    void setNextOnB(State *nextOnB);
+
+    State *getNextOnC() const;
+
+    void setNextOnC(State *nextOnC);
+
+    State *getNextOnD() const;
+
+    void setNextOnD(State *nextOnD);
+
+private:
+    State* nextOnA = nullptr;
+    State* nextOnB = nullptr;
+    State* nextOnC = nullptr;
+    State* nextOnD = nullptr;
+
     bool validity(std::deque<char> d);      //function to test if string w is part of language L
 };
 

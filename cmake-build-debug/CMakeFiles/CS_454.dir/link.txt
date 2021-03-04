@@ -1,1 +1,1 @@
-/usr/bin/c++   -lgmp -g   CMakeFiles/CS_454.dir/main.cpp.o CMakeFiles/CS_454.dir/DFA.cpp.o CMakeFiles/CS_454.dir/State.cpp.o  -o CS_454  -lgmp -lgmpxx 
+/usr/bin/c++   -lgmp -g   CMakeFiles/CS_454.dir/main.cpp.o CMakeFiles/CS_454.dir/DFA.cpp.o CMakeFiles/CS_454.dir/State.cpp.o CMakeFiles/CS_454.dir/DFAList.cpp.o  -o CS_454  -lgmp -lgmpxx 

@@ -170,6 +170,33 @@ DFA.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFA.cpp.s
 .PHONY : DFA.cpp.s
 
+DFAList.o: DFAList.cpp.o
+
+.PHONY : DFAList.o
+
+# target to build an object file
+DFAList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFAList.cpp.o
+.PHONY : DFAList.cpp.o
+
+DFAList.i: DFAList.cpp.i
+
+.PHONY : DFAList.i
+
+# target to preprocess a source file
+DFAList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFAList.cpp.i
+.PHONY : DFAList.cpp.i
+
+DFAList.s: DFAList.cpp.s
+
+.PHONY : DFAList.s
+
+# target to generate assembly for a file
+DFAList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFAList.cpp.s
+.PHONY : DFAList.cpp.s
+
 State.o: State.cpp.o
 
 .PHONY : State.o
@@ -236,6 +263,9 @@ help:
 	@echo "... DFA.o"
 	@echo "... DFA.i"
 	@echo "... DFA.s"
+	@echo "... DFAList.o"
+	@echo "... DFAList.i"
+	@echo "... DFAList.s"
 	@echo "... State.o"
 	@echo "... State.i"
 	@echo "... State.s"
