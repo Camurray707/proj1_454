@@ -1,5 +1,6 @@
 #include <iostream>
 #include "DFAList.h"
+#include <time.h>
 
 using namespace std;
 
@@ -17,9 +18,15 @@ int main() {
     //12: 553656
     //13: 1,444,728
 
-    DFAList newDFA;
-    cout<<newDFA.count(10);
+    clock_t t;
+    t = clock();
 
+    DFAList newDFA;
+    cout<<newDFA.count(8)<<endl;
+
+    t = clock() - t;
+
+    cout<<t<<((int)t)/CLOCKS_PER_SEC<<endl;
 
     return 0;
 }

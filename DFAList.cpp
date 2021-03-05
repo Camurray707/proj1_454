@@ -22,7 +22,9 @@ int DFAList::count(int n) {
 
     for (int i = startStateNumber ; i <= endStateNumber; i++) {
 
-        if (isValid(decode(i)) && decode(i).length() == n) {
+        string t = decode(i);                       //fixme::optimize decode
+
+        if (isValid(t) && t.length() == n) {        //fixme::optimize isValid
             count++;
         }
     }
@@ -77,7 +79,6 @@ bool DFAList::isValid(string s) {
 string DFAList::decode(int n) {                //turns the state number back into string
 
     int temp = n;
-
     string stringName;
     deque<char> string;
 
@@ -105,11 +106,9 @@ string DFAList::decode(int n) {                //turns the state number back int
                 break;
         }
     }
-
     for (char c : string) {
         stringName.push_back(c);
     }
-
     return stringName;
 }
 

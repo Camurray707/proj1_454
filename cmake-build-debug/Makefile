@@ -143,33 +143,6 @@ CS_454/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/build
 .PHONY : CS_454/fast
 
-DFA.o: DFA.cpp.o
-
-.PHONY : DFA.o
-
-# target to build an object file
-DFA.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFA.cpp.o
-.PHONY : DFA.cpp.o
-
-DFA.i: DFA.cpp.i
-
-.PHONY : DFA.i
-
-# target to preprocess a source file
-DFA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFA.cpp.i
-.PHONY : DFA.cpp.i
-
-DFA.s: DFA.cpp.s
-
-.PHONY : DFA.s
-
-# target to generate assembly for a file
-DFA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFA.cpp.s
-.PHONY : DFA.cpp.s
-
 DFAList.o: DFAList.cpp.o
 
 .PHONY : DFAList.o
@@ -196,33 +169,6 @@ DFAList.s: DFAList.cpp.s
 DFAList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFAList.cpp.s
 .PHONY : DFAList.cpp.s
-
-State.o: State.cpp.o
-
-.PHONY : State.o
-
-# target to build an object file
-State.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/State.cpp.o
-.PHONY : State.cpp.o
-
-State.i: State.cpp.i
-
-.PHONY : State.i
-
-# target to preprocess a source file
-State.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/State.cpp.i
-.PHONY : State.cpp.i
-
-State.s: State.cpp.s
-
-.PHONY : State.s
-
-# target to generate assembly for a file
-State.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/State.cpp.s
-.PHONY : State.cpp.s
 
 main.o: main.cpp.o
 
@@ -260,15 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CS_454"
-	@echo "... DFA.o"
-	@echo "... DFA.i"
-	@echo "... DFA.s"
 	@echo "... DFAList.o"
 	@echo "... DFAList.i"
 	@echo "... DFAList.s"
-	@echo "... State.o"
-	@echo "... State.i"
-	@echo "... State.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

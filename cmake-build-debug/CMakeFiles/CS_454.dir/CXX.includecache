@@ -6,16 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/chris/Desktop/cs_454/project1/DFA.h
-iostream
--
-vector
--
-tuple
--
-State.h
-/home/chris/Desktop/cs_454/project1/State.h
-
 /home/chris/Desktop/cs_454/project1/DFAList.cpp
 DFAList.h
 /home/chris/Desktop/cs_454/project1/DFAList.h
@@ -26,33 +16,5 @@ iostream
 cmath
 -
 deque
--
-
-/home/chris/Desktop/cs_454/project1/State.h
-iostream
--
-vector
--
-tuple
--
-queue
--
-cmath
--
-gmpxx.h
--
-
-/home/chris/Desktop/cs_454/project1/main.cpp
-iostream
--
-State.h
-/home/chris/Desktop/cs_454/project1/State.h
-DFA.h
-/home/chris/Desktop/cs_454/project1/DFA.h
-DFAList.h
-/home/chris/Desktop/cs_454/project1/DFAList.h
-math.h
--
-chrono
 -
 
