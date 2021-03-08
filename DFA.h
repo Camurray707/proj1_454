@@ -2,8 +2,8 @@
 // Created by chris on 3/7/2021.
 //
 
-#ifndef UNTITLED_DFA_H
-#define UNTITLED_DFA_H
+#ifndef DFA_H
+#define DFA_H
 
 #include <iostream>
 #include <vector>
@@ -48,4 +48,4 @@ private:
 };
 
 
-#endif //UNTITLED_DFA_H
+#endif //DFA_H
