@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CS_454
+# Target rules for targets named problem1
 
 # Build rule for target.
-CS_454: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CS_454
-.PHONY : CS_454
+problem1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 problem1
+.PHONY : problem1
 
 # fast build rule for target.
-CS_454/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/build
-.PHONY : CS_454/fast
+problem1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem1.dir/build.make CMakeFiles/problem1.dir/build
+.PHONY : problem1/fast
 
 DFA.o: DFA.cpp.o
 
@@ -149,7 +149,7 @@ DFA.o: DFA.cpp.o
 
 # target to build an object file
 DFA.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFA.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem1.dir/build.make CMakeFiles/problem1.dir/DFA.cpp.o
 .PHONY : DFA.cpp.o
 
 DFA.i: DFA.cpp.i
@@ -158,7 +158,7 @@ DFA.i: DFA.cpp.i
 
 # target to preprocess a source file
 DFA.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFA.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem1.dir/build.make CMakeFiles/problem1.dir/DFA.cpp.i
 .PHONY : DFA.cpp.i
 
 DFA.s: DFA.cpp.s
@@ -167,35 +167,35 @@ DFA.s: DFA.cpp.s
 
 # target to generate assembly for a file
 DFA.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/DFA.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem1.dir/build.make CMakeFiles/problem1.dir/DFA.cpp.s
 .PHONY : DFA.cpp.s
 
-main.o: main.cpp.o
+problem1.o: problem1.cpp.o
 
-.PHONY : main.o
+.PHONY : problem1.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/main.cpp.o
-.PHONY : main.cpp.o
+problem1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem1.dir/build.make CMakeFiles/problem1.dir/problem1.cpp.o
+.PHONY : problem1.cpp.o
 
-main.i: main.cpp.i
+problem1.i: problem1.cpp.i
 
-.PHONY : main.i
+.PHONY : problem1.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/main.cpp.i
-.PHONY : main.cpp.i
+problem1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem1.dir/build.make CMakeFiles/problem1.dir/problem1.cpp.i
+.PHONY : problem1.cpp.i
 
-main.s: main.cpp.s
+problem1.s: problem1.cpp.s
 
-.PHONY : main.s
+.PHONY : problem1.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CS_454.dir/build.make CMakeFiles/CS_454.dir/main.cpp.s
-.PHONY : main.cpp.s
+problem1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem1.dir/build.make CMakeFiles/problem1.dir/problem1.cpp.s
+.PHONY : problem1.cpp.s
 
 # Help Target
 help:
@@ -205,13 +205,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CS_454"
+	@echo "... problem1"
 	@echo "... DFA.o"
 	@echo "... DFA.i"
 	@echo "... DFA.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... problem1.o"
+	@echo "... problem1.i"
+	@echo "... problem1.s"
 .PHONY : help
 
 

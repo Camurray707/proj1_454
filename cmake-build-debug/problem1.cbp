@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="CS_454"/>
+		<Option title="problem1"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="CS_454">
-				<Option output="/home/chris/Desktop/cs_454/project1/cmake-build-debug/CS_454" prefix_auto="0" extension_auto="0"/>
+			<Target title="problem1">
+				<Option output="/home/chris/Desktop/cs_454/project1/cmake-build-debug/problem1" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/chris/Desktop/cs_454/project1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -53,14 +53,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS_454"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 problem1"/>
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="CS_454/fast">
-				<Option output="/home/chris/Desktop/cs_454/project1/cmake-build-debug/CS_454" prefix_auto="0" extension_auto="0"/>
+			<Target title="problem1/fast">
+				<Option output="/home/chris/Desktop/cs_454/project1/cmake-build-debug/problem1" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/chris/Desktop/cs_454/project1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -75,7 +75,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS_454/fast"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 problem1/fast"/>
 					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j16 -f &quot;/home/chris/Desktop/cs_454/project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -83,13 +83,13 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/chris/Desktop/cs_454/project1/DFA.cpp">
-			<Option target="CS_454"/>
+			<Option target="problem1"/>
 		</Unit>
 		<Unit filename="/home/chris/Desktop/cs_454/project1/DFA.h">
-			<Option target="CS_454"/>
+			<Option target="problem1"/>
 		</Unit>
-		<Unit filename="/home/chris/Desktop/cs_454/project1/main.cpp">
-			<Option target="CS_454"/>
+		<Unit filename="/home/chris/Desktop/cs_454/project1/problem1.cpp">
+			<Option target="problem1"/>
 		</Unit>
 		<Unit filename="/home/chris/Desktop/cs_454/project1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

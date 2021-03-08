@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/problem1.dir/problem1.cpp.o CMakeFiles/problem1.dir/DFA.cpp.o  -o problem1  -lgmp -lgmpxx 

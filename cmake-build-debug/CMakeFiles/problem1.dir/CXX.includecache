@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chris/Desktop/cs_454/project1/DFA.h
+iostream
+-
+vector
+-
+string
+-
+math.h
+-
+gmpxx.h
+-
+
+/home/chris/Desktop/cs_454/project1/problem1.cpp
+DFA.h
+/home/chris/Desktop/cs_454/project1/DFA.h
+iostream
+-
+gmpxx.h
+-
+
