@@ -1,36 +1,51 @@
 //
-// Created by chris on 2/24/21.
+// Created by chris on 3/7/2021.
 //
 
-#ifndef CS_454_DFA_H
-#define CS_454_DFA_H
+#ifndef UNTITLED_DFA_H
+#define UNTITLED_DFA_H
 
 #include <iostream>
 #include <vector>
-#include <tuple>
+#include <string>
+#include <math.h>
 #include <gmpxx.h>
-#include "State.h"
 
 class DFA {
 
+
 public:
+
+    //creates all the states in the DFA
     DFA();
 
-    mpz_class count(int n);                                         //computes the number of strings w of length n over { a, b, c, d }.
+    //encodes a string into it's state number
+    int encode(std::string s);
 
-    mpz_class minString();                                          //takes as input a DFA M and outputs a string w of shortest length accepted by the DFA.
+    //determines if a string is in the language or not
+    bool isValid(std::string s);
 
-    mpz_class smallestMultiple(int k, std::vector<int> S);          //takes as inp9ut a positive iteger k, and a subset S of {1-9} and outsputs the smallest positive integer y > 0 that is an integer multiple of k and has only the digits from S.
+    //a window of 5 + 1
+    int window(std::string buffer, char c);
 
-    void createDFA();
+    //determines if the buffer + the next chars are valid or not
+    void determiner (std::string buffer);
+
+
+    //count all valid numbers for n
+    mpz_class count(mpz_class n);
 
 private:
 
-    mpz_class currCount;
-    std::vector<State> myStates;
+    const int SIZE = 1365;
 
+    std::vector<mpz_class> previous;
+    std::vector<mpz_class> current;
+
+    //vector of all the states and the reject state created in the constructor
+    std::vector<std::string> myDFA;
 
 };
 
 
-#endif //CS_454_DFA_H
+#endif //UNTITLED_DFA_H

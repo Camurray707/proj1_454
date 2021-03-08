@@ -1,27 +1,17 @@
-#include <iostream>
-#include "State.h"
 #include "DFA.h"
-#include <math.h>
+#include <iostream>
+#include <gmpxx.h>
 
 using namespace std;
 
-
-
 int main() {
 
-    //badaabcbcdcabad: reject
-    //abbccdaabca: accept: 4461
-    //abbccdaabcaddbacdaabcdbabccd: accept: 2496
+    cout<<"Enter an integer input n for the length of the strings: ";
+    int n;
+    cin>>n;
 
-    DFA myDfa;
-    cout<<myDfa.count(6);
-
-
-
-
+    DFA test;
+    cout << "Total number of accepted strings with " << n << " length: " << test.count(n) << endl;
 
     return 0;
 }
-
-
-
