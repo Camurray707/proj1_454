@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/chris/CLionProjects/untitled/DFA.h
+iostream
+-
+vector
+-
+string
+-
+math.h
+-
+
+C:/Users/chris/CLionProjects/untitled/main.cpp
+DFA.h
+C:/Users/chris/CLionProjects/untitled/DFA.h
+iostream
+-
+
