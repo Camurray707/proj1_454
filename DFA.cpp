@@ -1,5 +1,5 @@
 //
-// Created by chris on 2/24/21.
+// Created by chris on 3/7/2021.
 //
 
 #include "DFA.h"
@@ -8,63 +8,106 @@ using namespace std;
 
 DFA::DFA() {
 
+    vector<mpz_class> p(SIZE, 1);
+    p.at(1364) = 0;
+    vector<mpz_class> c(SIZE, 0);
+    this->previous = p;
+    this->current = c;
+
+
+    string startState = "";
+    myDFA.push_back(startState);
+    char alpha[4] = {'a', 'b', 'c', 'd'};
+
+    for (int i = 0; i < 341; i++) {
+        for (int j = 0; j < 4; j++) {
+            myDFA.push_back(myDFA[i] + alpha[j]);
+        }
+    }
 }
 
-mpz_class DFA::count(int n) {
+int DFA::encode(std::string s) {
+    int stateNumber = 0;
+    int stateSize = s.length() - 1;
 
-    string emptyString = "";                //start string of empty string
-    State newState(emptyString);            //starting state
-    queue<State> tempQueue;                 //temporary queue to hold new states
-    queue<State> currQueue;                 //queue being counted
-    currQueue.push(newState);
+    for (char c : s) {
+        switch (c) {
+            case 'a':
+                stateNumber = stateNumber + (1 * pow(4, stateSize));
+                stateSize--;
+                break;
+            case 'b':
+                stateNumber = stateNumber + (2 * pow(4, stateSize));
+                stateSize--;
+                break;
+            case 'c':
+                stateNumber = stateNumber + (3 * pow(4, stateSize));
+                stateSize--;
+                break;
+            case 'd':
+                stateNumber = stateNumber + (4 * pow(4, stateSize));
+                stateSize--;
+                break;
+        }
+    }
+    return stateNumber;
+}
+
+//s is of size 6 or below
+bool DFA::isValid(std::string s) {
+    if (s.size() > 6) {cout<<"Error: isValid, size of s is greater than 6."<<endl;exit(-1);}
+    bool aPresent = false;
+    bool bPresent = false;
+    bool cPresent = false;
+    bool dPresent = false;
+
+    for (char c:s) {
+        switch (c) {
+            case 'a': aPresent = true;
+                break;
+            case 'b': bPresent = true;
+                break;
+            case 'c': cPresent = true;
+                break;
+            case 'd': dPresent = true;
+                break;
+        }
+    }
+    return aPresent && bPresent && cPresent && dPresent;
+}
+
+int DFA::window(std::string state, char c) {
+    string newString = state + c;
+    if (newString.size() < 6) return encode(newString);
+    else if (isValid(newString)) {
+        return encode(newString.substr(1,5));
+    }else {
+        return previous.size() - 1;
+    }
+}
+
+void DFA::determiner(std::string state) {
+    mpz_class count = 0;
+    char alpha[4] = {'a', 'b', 'c', 'd'};
+    for (char c : alpha) {
+        count += previous[window(state,c)];
+    }
+    current[encode(state)] = count;
+
+}
+
+mpz_class DFA::count(mpz_class n) {
 
     mpz_class count = 0;
-    mpz_class prevCount = 0;
-    int stringSize = 0;
 
-
-    while (stringSize < n) {
-
-
-//            if (currQueue.front().isValid())
-//                count++;
-
-            for (int j = 0; j < 4 * pow(4,stringSize); j++) {
-
-                switch (j) {
-                    case 0: {
-                        State tempStateA(currQueue.front().getNextStates(0));
-                        if (tempStateA.isValid() && stringSize == n -1) count++;
-                        tempQueue.push(tempStateA);
-                    }
-                        break;
-                    case 1: {
-                        State tempStateB(currQueue.front().getNextStates(1));
-                        if (tempStateB.isValid() && stringSize == n -1) count++;
-                        tempQueue.push(tempStateB);
-                    }
-                        break;
-                    case 2: {
-                        State tempStateC(currQueue.front().getNextStates(2));
-                        if (tempStateC.isValid() && stringSize == n -1) count++;
-                        tempQueue.push(tempStateC);
-                    }
-                        break;
-                    case 3: {
-                        State tempStateD(currQueue.front().getNextStates(3));
-                        if (tempStateD.isValid() && stringSize == n - 1) count++;
-                        tempQueue.push(tempStateD);
-                        currQueue.pop();
-                    }
-                        break;
-                }
-                if (currQueue.empty()) {
-                    currQueue = tempQueue;
-                    queue<State> empty;
-                    swap(tempQueue, empty);
-                    stringSize++;
-                }
-            }
+    while (count < n ) {
+        for (int i = 0; i < previous.size() - 1; i++){
+            determiner(myDFA.at(i));
+        }
+        previous = current;
+        count++;
     }
-    return count;
+    return current[0];
 }
+
+
